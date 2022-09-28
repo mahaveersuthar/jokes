@@ -20,15 +20,10 @@ const sendGetRequest = async () => {
         console.error(err);
     }
 };
-const urlToLocal=window.localStorage.getItem('url');
+const urlToLocal='https://joke-entertainment.web.app/'
 const openWhatsapp = () => {
     const whatsappData = jokes.textContent;
     window.open(`whatsapp://send?text=${whatsappData}${urlToLocal}`);
-}
-var url = location.href;
-localStorage.setItem("url", url);
-function loadUrl() {
-    location.href = localStorage.getItem("url");
 }
 btn.addEventListener('click', fetchData);
 fetchData();
